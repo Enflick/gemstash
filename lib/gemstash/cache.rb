@@ -6,7 +6,7 @@ module Gemstash
   # for them. Under the hood is either a Memcached client via the dalli gem, or
   # an in memory client via the lru_redux gem.
   class Cache
-    EXPIRY = 30 * 60
+    EXPIRY = 7 * 24 * 60 * 60
     extend Forwardable
     def_delegators :@client, :flush
 
